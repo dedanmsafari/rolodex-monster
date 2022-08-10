@@ -1,5 +1,5 @@
 .card-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   background-color: #f1caa6;
   border: 1px solid grey;
