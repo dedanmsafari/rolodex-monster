@@ -3,20 +3,15 @@ import React, { useEffect, useState, ChangeEvent } from "react";
 import "./App.css";
 import Cardlist from "./components/card-list/card-list.component";
 import SearchBox from "./components/searchbox/searchbox.component";
-
-export type Monsters = {
-  id: string;
-  email: string;
-  name: string;
-};
+import Monster from "./components/models/moster";
 
 const App = () => {
-  const [monsters, setMonsters] = useState<Monsters[]>([]);
+  const [monsters, setMonsters] = useState<Monster[]>([]);
   const [searchField, setSearchField] = useState("");
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
   useEffect(() => {
     const fetchMonsters = async () => {
-      const users = await getData<Monsters[]>(
+      const users = await getData<Monster[]>(
         "https://jsonplaceholder.typicode.com/users"
       );
       setMonsters(users);
