@@ -1,10 +1,10 @@
 import React from "react";
-import { Monsters } from "../../App";
+import Monster from "../models/moster";
 import Card from "../card/card.component";
 import "./card-list.styles.css";
 
 type CardListProps = {
-  monsters: Monsters[];
+  monsters: Monster[];
 };
 const Cardlist = ({ monsters }: CardListProps) => {
   return (
