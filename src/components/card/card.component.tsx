@@ -1,9 +1,9 @@
 import React from "react";
-import { Monsters } from "../../App";
+import Monster from "../models/moster";
 import "./card.styles.css";
 
 type CardProps = {
-  monster: Monsters;
+  monster: Monster;
 };
 
 const Card = ({ monster }: CardProps) => {
